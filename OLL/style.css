@@ -1,0 +1,149 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== FONDO OSCURO ===== */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0a0f1f, #000814 70%);
+  color: #e6f1ff;
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+h1 {
+  margin: 35px 0;
+  font-size: 36px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #2ec4ff;
+  text-shadow:
+    0 0 12px rgba(46, 196, 255, 0.8),
+    0 0 30px rgba(46, 196, 255, 0.4);
+}
+
+/* ===== SECCIÓN ===== */
+section {
+  padding: 30px 20px;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+article {
+  margin: 0 auto;
+  padding: 40px;
+  width: 90%;
+  max-width: 650px;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    180deg,
+    #020a1a,
+    #020f2f
+  );
+
+  border: 1px solid rgba(46, 196, 255, 0.35);
+
+  box-shadow:
+    0 0 40px rgba(0, 140, 255, 0.25),
+    inset 0 0 25px rgba(0, 140, 255, 0.15);
+}
+
+/* ===== SUBTÍTULOS ===== */
+article h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #4fd8ff;
+  text-shadow: 0 0 8px rgba(79, 216, 255, 0.6);
+}
+
+/* ===== TEXTO ===== */
+article p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  color: #dbeeff;
+}
+
+/* ===== ALGORITMO ===== */
+article p strong {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+
+  background: rgba(46, 196, 255, 0.15);
+  color: #9be7ff;
+
+  font-size: 20px;
+  letter-spacing: 2px;
+
+  box-shadow:
+    inset 0 0 15px rgba(46, 196, 255, 0.5),
+    0 0 20px rgba(46, 196, 255, 0.4);
+}
+
+/* ===== IMAGEN ===== */
+article img {
+  margin-top: 20px;
+  border-radius: 14px;
+  box-shadow:
+    0 0 35px rgba(46, 196, 255, 0.55);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 55px rgba(46, 196, 255, 0.85);
+}
+
+/* ===== HR ===== */
+hr {
+  border: none;
+  height: 2px;
+  margin: 28px 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #2ec4ff,
+    transparent
+  );
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  article {
+    padding: 25px;
+  }
+
+  article h2 {
+    font-size: 20px;
+  }
+
+  article img {
+    width: 100%;
+  }
+}
+.btn-volver {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      padding: 10px 16px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .btn-volver:hover {
+      background-color: #1b5e20;
+    }
