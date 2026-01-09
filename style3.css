@@ -1,0 +1,157 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== FONDO ===== */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1f5f45, #0b2419 72%);
+  color: #e8fff3;
+}
+
+/* ===== TÍTULO ===== */
+h1 {
+  margin: 35px 0;
+  font-size: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8dffc2;
+  text-shadow:
+    0 0 14px rgba(141, 255, 194, 0.6),
+    0 0 30px rgba(141, 255, 194, 0.25);
+}
+
+/* ===== SECCIÓN ===== */
+section {
+  padding: 30px 20px 70px;
+}
+
+/* ===== ISLAS FLOTANTES ===== */
+article {
+  position: relative;
+  margin: 50px auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 520px;
+  border-radius: 28px;
+
+  /* BASE VERDE OSCURA */
+  background: linear-gradient(
+    160deg,
+    #173f2e,
+    #1f5a40
+  );
+
+  /* NÚCLEO AMARILLO SUAVE */
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 215, 90, 0.25),
+    inset 0 0 25px rgba(255, 215, 90, 0.35),
+    0 30px 65px rgba(0, 0, 0, 0.85),
+    0 0 40px rgba(141, 255, 194, 0.3);
+
+  border: 1px solid rgba(141, 255, 194, 0.35);
+
+  animation: flotar 6.5s ease-in-out infinite;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+/* ===== SOMBRA BAJO LA ISLA ===== */
+article::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -38px;
+  width: 75%;
+  height: 32px;
+  background: radial-gradient(
+    ellipse,
+    rgba(0, 0, 0, 0.85),
+    transparent 70%
+  );
+  transform: translateX(-50%);
+  filter: blur(14px);
+}
+
+/* ===== ANIMACIÓN ===== */
+@keyframes flotar {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-16px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== HOVER ===== */
+article:hover {
+  transform: translateY(-22px) scale(1.03);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 215, 90, 0.45),
+    inset 0 0 35px rgba(255, 215, 90, 0.55),
+    0 45px 90px rgba(0, 0, 0, 0.9),
+    0 0 65px rgba(141, 255, 194, 0.55);
+}
+
+/* ===== SUBTÍTULOS ===== */
+article h2 {
+  font-size: 26px;
+  margin-bottom: 18px;
+  color: #d8ff9a;
+  text-shadow: 0 0 8px rgba(216, 255, 154, 0.4);
+}
+
+/* ===== IMÁGENES ===== */
+article img {
+  border-radius: 22px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+article img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 28px rgba(216, 255, 154, 0.55);
+}
+
+/* ===== HR ===== */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #8dffc2,
+    transparent
+  );
+  margin: 22px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  article h2 {
+    font-size: 22px;
+  }
+
+  article img {
+    width: 100%;
+  }
+}
+.btn-volver {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      padding: 10px 16px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .btn-volver:hover {
+      background-color: #1b5e20;
+    }
